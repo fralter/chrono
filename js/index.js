@@ -57,8 +57,8 @@
       if ('undefined' === typeof sep) {
         sep = ':';
       }
-      var min = Math.floor(t/600);
-      var cent = Math.floor((t - 600*min)/6);
+      var min = Math.floor(t/36000);
+      var cent = Math.floor((t - 36000*min)/360);
       if (cent < 10) {
         cent = "0" + cent;
       }
