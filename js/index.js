@@ -112,11 +112,6 @@ $('#stop').on('click', function() {
   return false;
 });
 
-$('#pause').on('click', function() {
-  chronometer.pause();
-  return false;
-});
-
 chronoNumber = 0;
 $('#pick').on('click', function() {
   var timeElapsed = chronometer.getElapsedTime();
