@@ -121,6 +121,6 @@ $('#pick').on('click', function() {
   var difft = Chronometer.utils.humanFormat(timeElapsed-previousTimeElapsed);
   previousTimeElapsed = timeElapsed;
   chronoNumber++;
-  jPickZone.append('durée chrono n°'+ chronoNumber + ' - ' + difft + ' (picked @ ' + t + ')<br>');
+  jPickZone.prepend('durée chrono n°'+ chronoNumber + ' - ' + difft + ' (picked @ ' + t + ')<br>');
   return false;
 });

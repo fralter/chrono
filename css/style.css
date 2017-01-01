@@ -12,3 +12,8 @@
 .page-header { text-align:center}
 
 #pickzone { text-align:center}
+
+.container {
+  height: 50vh;
+  overflow-y: scroll;
+}
