@@ -14,7 +14,13 @@
 
 <body>
   <div class="page-header">
-  <h2>Chrono'minute <small>Made4Emilie</small></h2>
+  <h3><button id="stop" type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+  </button>
+  Chrono'minute <small>Made4Emilie</small>
+  <button id="send" type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+  </button></h3>
 </div>
 
 <h1 id="chrono">0:00</h1>
@@ -25,11 +31,12 @@
 <button id="start" class="btn btn-success btn-lg">start</button>
 <button id="pick" class="btn btn-primary btn-lg hidden">pick</button>
 <button id="pause" class="btn btn-warning">pause</button>
-<button id="stop" class="btn btn-danger">stop</button>
 </div>
+<div id="emailZone" class="hidden"></div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
+}
 
 </body>
 </html>

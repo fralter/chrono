@@ -82,6 +82,7 @@
 
 var jChrono = $('#chrono');
 var jPickZone = $('#pickzone');
+var emailZone = $('#emailZone')
 var chronometer = new Chronometer({
   precision: 10,
   ontimeupdate: function(t) {
@@ -103,8 +104,11 @@ $('#start').on('click', function() {
 $('#stop').on('click', function() {
   chronometer.stop();
   previousTimeElapsed = 0;
+  chronoNumber = 0;
   $('#pick').addClass('hidden');
   $('#start').removeClass('hidden');
+  jPickZone.html('');
+  emailZone.html('');
   return false;
 });
 
@@ -114,13 +118,24 @@ $('#pause').on('click', function() {
 });
 
 chronoNumber = 0;
-
 $('#pick').on('click', function() {
   var timeElapsed = chronometer.getElapsedTime();
   var t = Chronometer.utils.humanFormat(timeElapsed);
   var difft = Chronometer.utils.humanFormat(timeElapsed-previousTimeElapsed);
   previousTimeElapsed = timeElapsed;
   chronoNumber++;
-  jPickZone.prepend('durée chrono n°'+ chronoNumber + ' - ' + difft + ' (picked @ ' + t + ')<br>');
-  return false;
+  textChrono = 'durée chrono n°'+ chronoNumber + ' - ' + difft + ' (picked @ ' + t + ')<br>';
+  jPickZone.prepend(textChrono);
+  emailZone.append(textChrono);
+return false;
+});
+
+$('#send').click(function(){
+    emailZone.removeClass('hidden');
+    $(location).attr('href', 'mailto:?subject='
+                             + encodeURIComponent("Chrono'minute du " + new Date().toLocaleDateString())
+                             + "&body=" 
+                             + encodeURIComponent(emailZone.html().split('<br>').join('\n'))
+    );
+    emailZone.addClass('hidden');
 });
