@@ -1,5 +1,6 @@
 {
  "name": "Chrono'minute",
+ "short_name": "Chrono'minute",
  "icons": [
   {
    "src": "android-icon-36x36.png",
@@ -38,8 +39,7 @@
    "density": "4.0"
   }
  ],
-  "scope": "/",
-  "start_url": "./",
+  "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait"
 }
