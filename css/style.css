@@ -1,5 +1,11 @@
-.hidden {display:none;}
-#chrono {text-align:center;}
+.hidden {
+    display: none;
+}
+
+#chrono {
+    text-align: center;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -7,13 +13,18 @@
     height: 80px;
     padding: 10px;
     background-color: #f5f5f5;
-  text-align:center;
+    text-align: center;
 }
-.page-header { text-align:center}
 
-#pickzone { text-align:center}
+.page-header {
+    text-align: center;
+}
+
+#pickzone {
+    text-align: center;
+}
 
 .container {
-  height: 50vh;
-  overflow-y: scroll;
+    height: 50vh;
+    overflow-y: scroll;
 }
